@@ -1,0 +1,46 @@
+* {
+	font-size: 14px;
+	font-family: 'Roboto', sans-serif;
+}
+
+.header {
+	font-size: 46px;
+	background-color: magenta;
+}
+
+.footer {
+	font-size: 10px;
+	background-color: magenta;
+}
+
+.content {
+	font-size: 14px;
+}
+
+.navigation {
+	font-size: 12px;
+	background-color: blue;
+}
+
+.sidebar {
+	font-size: 10px;
+	background-color: magenta;
+}
+
+header {
+	background-color: red;
+	text-align: center
+}
+
+footer {
+	background-color: blue;
+	text-align: center
+}
+
+aside {
+	background-color: green;
+}
+
+nav {
+	background-color: yellow;
+};
