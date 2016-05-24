@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>My Form</title>
+	</head>
+	<body>
+		<form>
+			Name:
+			<input type="text" name="name" placeholder="First Name" required><br><br>
+			Last Name:
+			<input type="text" name="lastname" placeholder="Last Name" required><br><br>
+			E-mail:
+			<input type="email" name="email" placeholder="Enter a valid email address" required><br><br>
+			Birthday:
+			<input type="date" name="birthday" required><br><br>
+			Favourite sport:
+			<select name="sports">
+			  <option value="football">Football</option>
+			  <option value="basketball">Basketball</option>
+			  <option value="rugby">Rugby</option>
+			  <option value="golf">Golf</option>
+				<option value="tennis">Tennis</option>
+			</select><br><br>
+			Bio: <br>
+			<textarea name="bio" rows="10" cols="30">Tell us something about yourself!.</textarea><br><br>
+			<button type="submit" name="submitButton" value="SubmitForm">Submit</button>
+			<button type="clear" name="clearButton" value="Clear">Clear</button>
+		</form>
+	</body>
+</html>
+
+Add relevant validation rules for all fields (like required fields, valid email).
