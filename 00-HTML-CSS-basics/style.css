@@ -3,28 +3,38 @@
 	font-family: 'Roboto', sans-serif;
 }
 
+.container{
+	display: flex;
+	flex-wrap: wrap;
+}
+
 .header {
 	font-size: 46px;
 	background-color: magenta;
+	width: 100%;
 }
 
 .footer {
 	font-size: 10px;
 	background-color: magenta;
+	width: 100%;
 }
 
 .content {
 	font-size: 14px;
+	width: 50%;
 }
 
 .navigation {
 	font-size: 12px;
 	background-color: blue;
+	width: 25%;
 }
 
 .sidebar {
 	font-size: 10px;
 	background-color: magenta;
+	width: 25%;
 }
 
 header {
