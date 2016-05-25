@@ -19,9 +19,26 @@
 			</p>
 		</section>
 		<section>
-			<p class="hidden">
+			<p class="hidden fade">
 				Hello World
 			</p>
 		</section>
 	</body>
+	<script type="text/javascript">
+	function fadeIn(el, display){
+		el.style.opacity = 0;
+		el.style.display = display || "block";
+
+		(function fade() {
+			var val = parseFloat(el.style.opacity);
+			if ((val += .01) <= 1) {
+				el.style.opacity = val;
+				requestAnimationFrame(fade);
+			}
+		})();
+	}
+
+	var el = document.querySelector('.fade');
+	window.onload = fadeIn(el);
+	</script>
 </html>
