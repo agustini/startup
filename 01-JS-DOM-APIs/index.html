@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 		<title></title>
 	</head>
 	<body>
@@ -44,16 +45,20 @@
 
 	window.onload = fadeIn(el);
 
-	var oReq = new XMLHttpRequest();
-	oReq.open("GET", "http://api.icndb.com/jokes/random");
-	oReq.send();
+	function reqListener(){
+		var request = $.ajax({ url: 'http://api.icndb.com/jokes/random' });
 
-	function reqListener () {
-		var newJoke = document.createElement('p');
-		newJoke.textContent = JSON.parse(oReq.responseText).value.joke
-		document.getElementById('jokeSection').appendChild(newJoke);
+		request.then(
+			function(data){
+				var newJoke = document.createElement('p');
+				newJoke.textContent = data.value.joke;
+				document.getElementById('jokeSection').appendChild(newJoke);
+			}, function(xhr, state, error){
+				console.log(arguments);
+			}
+		);
 	}
 
-	btn.addEventListener("click", reqListener)
+	btn.addEventListener("click", reqListener);
 	</script>
 </html>
