@@ -7,6 +7,8 @@
 		<title></title>
 	</head>
 	<body>
+		<ul id="list">
+		</ul>
 		<section>
 			<h1>Header 1</h1>
 			<p>
@@ -58,6 +60,23 @@
 			}
 		);
 	}
+
+	var request = $.ajax({
+		url: 'https://api.github.com/search/repositories?q=Javascript'
+	});
+
+	request.then(
+		function(data){
+			let ul = document.getElementById("list");
+			for (i = 0; i < data.items.length; i++){
+				let li = document.createElement("li");
+				li.appendChild(document.createTextNode(data.items[i].full_name));
+				ul.appendChild(li);
+			}
+		}, function(xhr, state, error){
+			console.log(arguments);
+		}
+	);
 
 	btn.addEventListener("click", reqListener);
 	</script>
